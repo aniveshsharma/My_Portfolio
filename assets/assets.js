@@ -35,6 +35,7 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import work1 from './work-1.jpg';
 
 export const assets = {
     user_image,
@@ -80,12 +81,12 @@ export const workData = [
     {
         title: 'Frontend project',
         description: 'Web Design',
-        bgImage: '/work-1.png',
+        bgImage: '/work-1.jpg',
     },
     {
         title: 'Geo based app',
         description: 'Mobile App',
-        bgImage: '/work-2.png',
+        bgImage: '/work-2.jpg',
     },
     {
         title: 'Photography site',
@@ -95,7 +96,7 @@ export const workData = [
     {
         title: 'UI/UX designing',
         description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        bgImage: '/work-4.jpg',
     },
 ]
 

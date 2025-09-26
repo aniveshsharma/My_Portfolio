@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <div id='about' className='w-full px-[12%] py-10 scroll-mt-20'>
+    <div id='about' className='w-full px-[12%] py-10 scroll-mt-30'>
       <h4 className='text-center mb-2 text-lg font-ovo'>
         Introduction
       </h4>

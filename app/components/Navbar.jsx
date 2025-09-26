@@ -80,9 +80,9 @@ const Navbar = () => {
 
         {/* Right controls */}
         <div className='flex items-center gap-4'>
-          <button>
+          {/*<button>
             <Image src={assets.moon_icon} alt='' className='w-6' />
-          </button>
+          </button>*/}
 
           <a
             href='#contact'
