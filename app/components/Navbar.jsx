@@ -63,7 +63,7 @@ const Navbar = () => {
           </li>
           <li>
             <a className='font-ovo' href='#services'>
-              Services
+              My Certification
             </a>
           </li>
           <li>

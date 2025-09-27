@@ -10,7 +10,7 @@ const Header = () => {
         <Image
           src={assets.profile_img}
           alt="Profile Image"
-          className="rounded-full w-32 mx-auto mb-4"
+          className="rounded-full w-50 mx-auto mb-4"
         />
 
         {/* Heading */}

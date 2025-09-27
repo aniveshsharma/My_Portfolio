@@ -1,4 +1,4 @@
-import user_image from './user-image.png';
+import user_image from './user-image.jpg';
 import code_icon from './code-icon.png';
 import code_icon_dark from './code-icon-dark.png';
 import edu_icon from './edu-icon.png';
@@ -15,7 +15,7 @@ import logo from './logo.png';
 import logo_dark from './logo_dark.png';
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
-import profile_img from './profile-img.png';
+import profile_img from './profile-img.jpg';
 import download_icon from './download-icon.png';
 import hand_icon from './hand-icon.png';
 import header_bg_color from './header-bg-color.png';
@@ -36,6 +36,8 @@ import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import work1 from './work-1.jpg';
+import jupyter from './jupyter.png';
+import powerbi from './powerbi.png'
 
 export const assets = {
     user_image,
@@ -74,37 +76,61 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    jupyter,
+    powerbi
 };
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: 'Patient Data Analysis',
+        description: 'Power Bi',
+        language : '',
+        bgImage: '/work-7.png',
+    },
+    {
+        title: 'Patient Data Analysis',
+        description: 'Power Bi',
+        language : 'Java Swings',
         bgImage: '/work-1.jpg',
     },
     {
         title: 'Geo based app',
         description: 'Mobile App',
+        language : 'Java Swings',
         bgImage: '/work-2.jpg',
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
+        title: 'School Managenent System',
+        description: 'Apache Netbeans',
+        language : 'Java Swings',
         bgImage: '/work-3.png',
     },
     {
         title: 'UI/UX designing',
         description: 'UI/UX Design',
+        language : 'Java Swings',
         bgImage: '/work-4.jpg',
+    },
+    {
+        title: 'UI/UX designing',
+        description: 'UI/UX Design',
+        language : 'Java Swings',
+        bgImage: '/work-5.jpg',
+    },
+    {
+        title: 'UI/UX designing',
+        description: 'UI/UX Design',
+        language : 'Java Swings',
+        bgImage: '/work-6.jpg',
     },
 ]
 
-export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+export const mycertification = [
+    { icon: assets.edu_icon, title: 'Data Analytics', description: 'Institute:- TGC Animation and Multimedia Place:- South Ex., New Delhi', link: '' },
+    { icon: assets.edu_icon, title: 'Bachelor of Computer Application (BCA)', description: 'Indira Gandhi National Open University Place:- New Delhi', link: '' },
+    { icon: assets.edu_icon, title: 'Online certifications', description: 'Python (IBM, Hacker Rank, Cognitive.ai), SQL Intermidiate (Hacker Rank)   , Web Scraping using Beautiful Soup (Simpli learn| SkillUP)', link: '' },
+    { icon: assets.edu_icon, title: 'Advance Deploma in Computer Application (ADCA)', description: 'SS Technology Center Place:- Ballia, Uttar Pradesh', link: '' },
 ]
 
 export const infoList = [
@@ -114,5 +140,5 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.vscode, assets.jupyter, assets.powerbi, assets.firebase, assets.mongodb, assets.figma, assets.git,
 ];

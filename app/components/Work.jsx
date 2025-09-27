@@ -85,6 +85,7 @@ const Work = () => {
               <div>
                 <h2 className="text-xl font-bold">{project.title}</h2>
                 <p className="text-sm">{project.description}</p>
+                <p className="text-sm">{project.language}</p>
               </div>
               <div className="flex justify-end">
                 <Image
@@ -121,7 +122,7 @@ const Work = () => {
           cursor-pointer
         "
       >
-        Show more
+        See all...
         <Image
           src={assets.right_arrow_bold}
           alt="Right arrow"

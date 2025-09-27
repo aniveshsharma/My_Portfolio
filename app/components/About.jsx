@@ -12,7 +12,7 @@ const About = () => {
       </h4>
       <h2 className='text-center text-5xl font-ovo'>About Me</h2>
       <div className='flex w-full flex-col lg:flex-row item-center gap-20 my-20'>
-        <div><Image src={assets.user_image} alt='user' className='w-full rounded-1xl'/></div>
+        <div><Image src={assets.user_image} alt='user' className='w-100 rounded-3xl'/></div>
         <div className='flex-1'>
           <p className='mb-10 max-w-2xl font-ovo'>
             Excited to begin my career journey as a Data Analyst, leveraging my analytical skills and
