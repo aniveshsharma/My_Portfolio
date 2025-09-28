@@ -7,6 +7,7 @@ import Services from "./components/My Certification";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Badge from "./components/Badge";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
    <Header />
    <About />
    <Services />
+   <Badge />
    <Work />
    <Contact />
    <Footer />

@@ -11,7 +11,9 @@ const Services = () => {
       <h4 className="text-center mb-2 text-lg font-ovo">What I Did...</h4>
       <h2 className="text-center text-5xl font-ovo">My certification</h2>
       <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo">
-        I am a Data Analyst Student
+        My certifications reflect my dedication to continuous learning and professional growth. Each certification 
+				represents a commitment to mastering new skills and staying at the forefront of industry standards. They 
+				empower me to deliver high-quality results and bring added value to every project.
       </p>
 
       {/* Service Cards */}
@@ -34,6 +36,7 @@ const Services = () => {
             </h3>
             <p className="text-sm text-gray-600 leading-5">{description}</p>
             <Link
+              target = "_blank"
               href={link}
               className="flex items-center gap-2 text-sm mt-5 text-blue-600 hover:underline"
               aria-label={`Read more about ${title}`}
