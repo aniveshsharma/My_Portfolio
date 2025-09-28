@@ -169,6 +169,6 @@ export const toolsData = [
 ];
 
 export const badges = [
-  { id: 1, image: badge1, title: 'Certified Data Analyst', link: 'https://example.com/cert1' },
-  { id: 2, image: badge2, title: 'Python Expert', link: 'https://example.com/cert2' },
+  { id: 1, image: badge1, title: 'Certified Data Analyst', link: 'https://www.credly.com/badges/ab33ea97-a256-4f05-a16f-9a667a8ff440' },
+  { id: 2, image: badge2, title: 'Python Expert', link: 'https://www.hackerrank.com/profile/aniveshsharma221' },
 ];

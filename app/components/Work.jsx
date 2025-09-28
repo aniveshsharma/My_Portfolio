@@ -6,61 +6,66 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
-const VISIBLE_CARDS = 3;
-
 const Work = () => {
   const [startIndex, setStartIndex] = useState(0);
+  const [visibleCardsCount, setVisibleCardsCount] = useState(3);
 
-  // Auto slide every 3 seconds
+  // Responsive card count
+  useEffect(() => {
+    const updateCardCount = () => {
+      const width = window.innerWidth;
+      if (width < 640) setVisibleCardsCount(1);
+      else if (width < 1024) setVisibleCardsCount(2);
+      else setVisibleCardsCount(3);
+    };
+
+    updateCardCount();
+    window.addEventListener('resize', updateCardCount);
+    return () => window.removeEventListener('resize', updateCardCount);
+  }, []);
+
+  // Auto slide every 6s
   useEffect(() => {
     const interval = setInterval(() => {
       setStartIndex((prev) =>
-        prev + VISIBLE_CARDS >= workData.length ? 0 : prev + 1
+        prev + visibleCardsCount >= workData.length ? 0 : prev + 1
       );
     }, 6000);
 
     return () => clearInterval(interval);
-  }, []); // ✅ Keep this dependency array EMPTY
+  }, [visibleCardsCount]);
 
   const prevSlide = () => {
     setStartIndex((prev) =>
-      prev === 0 ? workData.length - VISIBLE_CARDS : prev - 1
+      prev === 0 ? workData.length - visibleCardsCount : prev - 1
     );
   };
 
   const nextSlide = () => {
     setStartIndex((prev) =>
-      prev + VISIBLE_CARDS >= workData.length ? 0 : prev + 1
+      prev + visibleCardsCount >= workData.length ? 0 : prev + 1
     );
   };
 
   const visibleCards = [];
-  for (let i = 0; i < VISIBLE_CARDS; i++) {
+  for (let i = 0; i < visibleCardsCount; i++) {
     visibleCards.push(workData[(startIndex + i) % workData.length]);
   }
 
   return (
-    <div id="work" className="w-full px-[12%] py-16 scroll-mt-20 relative">
-      {/* Section Headings */}
+    <div id="work" className="w-full px-[6%] sm:px-[8%] lg:px-[12%] py-16 scroll-mt-20 relative">
+      {/* Headings */}
       <h4 className="text-center mb-2 text-lg font-ovo">My Portfolio</h4>
       <h2 className="text-center text-5xl font-ovo">My Latest Work</h2>
       <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo">
         A showcase of the projects I’ve built with passion and purpose.
       </p>
 
-      {/* Left Arrow */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-3 z-10 hover:bg-gray-200"
-      >
+      {/* Arrows */}
+      <button onClick={prevSlide} className="absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-3 z-10 hover:bg-gray-200">
         <FaChevronLeft size={20} />
       </button>
-
-      {/* Right Arrow */}
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-3 z-10 hover:bg-gray-200"
-      >
+      <button onClick={nextSlide} className="absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-3 z-10 hover:bg-gray-200">
         <FaChevronRight size={20} />
       </button>
 
@@ -75,7 +80,7 @@ const Work = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -30 }}
               transition={{ duration: 0.6, ease: 'easeInOut' }}
-              className="min-w-[30%] h-96 bg-cover bg-center rounded-xl overflow-hidden shadow-lg relative group cursor-pointer"
+              className="w-full sm:min-w-[48%] lg:min-w-[30%] h-96 bg-cover bg-center rounded-xl overflow-hidden shadow-lg relative group cursor-pointer"
               style={{ backgroundImage: `url(${project.bgImage})` }}
             >
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition-all duration-300 flex flex-col justify-between p-5 text-white">
@@ -89,8 +94,8 @@ const Work = () => {
                     href={project.link || '#'}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block"
                     onClick={(e) => e.stopPropagation()}
+                    className="inline-block"
                   >
                     <Image
                       src={assets.send_icon}
@@ -107,7 +112,7 @@ const Work = () => {
         </AnimatePresence>
       </div>
 
-      {/* Show More Button */}
+      {/* Show More */}
       <motion.a
         target="_blank"
         href="https://github.com/aniveshsharma"
