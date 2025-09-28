@@ -96,7 +96,7 @@ const Header = () => {
         </motion.a>
 
         <motion.a
-          href="/sample-resume.pdf"
+          href= "https://drive.google.com/file/d/1er1Sch1CCx6yJI_JJW4tnluQRxYyp0Y0/view?usp=sharing"
           download
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
