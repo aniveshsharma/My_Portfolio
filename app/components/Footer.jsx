@@ -11,7 +11,7 @@ const Footer = () => {
         <Image src={assets.logo} alt="Logo" className="w-36 mx-auto mb-2" />
         <div className="w-max flex items-center gap-2 m-auto">
           <Image src={assets.mail_icon} alt="Mail" className="w-6" />
-          akksharma12345@gmail.com
+          aniveshsharma2202@gmail.com
         </div>
       </div>
 
